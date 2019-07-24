@@ -1,0 +1,220 @@
+ <head>
+<link rel="stylesheet" type="text/css" href="main.css">
+</head> 
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+<nav id="navbar">
+  <header>C Documentation</header>
+  <ul> 
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#Hello_world" rel="internal"><li>Hello world</li></a>
+    <a class="nav-link" href="#Variables" rel="internal"><li>Variables</li></a>
+    <a class="nav-link" href="#Declaring_variables" rel="internal"><li>Declaring variables</li></a>
+    <a class="nav-link" href="#Variable_scope" rel="internal"><li>Variable scope</li></a>
+    <a class="nav-link" href="#Global_variables" rel="internal"><li>Global variables</li></a>
+    <a class="nav-link" href="#Constants" rel="internal"><li>Constants</li></a>
+    <a class="nav-link" href="#Data_types" rel="internal"><li>Data types</li></a>
+    <a class="nav-link" href="#if...else_statement" rel="internal"><li>if...else statement</li></a>
+    <a class="nav-link" href="#while_statement" rel="internal"><li>while statement</li></a>
+    <a class="nav-link" href="#Function_declarations" rel="internal"><li>Function declarations</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>  
+      <p> C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope and recursion, while a static type system prevents many unintended operations. </p>
+		By design, C provides constructs that map efficiently to typical machine instructions, and therefore it has found lasting use in applications that had formerly been coded in assembly language, including operating systems, as well as various application software for computers ranging from supercomputers to embedded systems. 
+	  </p>
+	  
+	 
+      </artice>
+    </section>
+
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article> 
+To get started with writing in C, open a Text Editor and write your first "Hello world" C code:
+<code>
+#include &#60;stdio.h&#62;
+int main()
+{
+   printf("Hello, World!");
+   return 0;
+}
+</code>
+
+Save the file as main.c and compile with "gcc main.c -o HelloWorld.exe"
+    </article>
+    </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <p>
+You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+    </p>
+    <p>
+A C identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because C is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+    </p>
+    <p>
+You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers.
+
+Some examples of legal names are Number_hits, temp99, and _name.
+    </p>
+   
+    </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+You can declare a variable in three ways:
+      <p>
+      With the keyword var. For example, <code>var x = 42.</code> This syntax can be used to declare both local and global variables.
+      </p>
+      <p>
+        By simply assigning it a value. For example, <code>x = 42.</code> This always declares a global variable. It generates a strict C warning. You shouldn't use this variant.
+      </p>
+    </article>
+    </section>
+  <section class="main-section" id="Variable_scope">
+    <header>Variable scope</header>
+    <article>
+     <p> When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+
+<code>if (true) {
+  var x = 5;
+}
+printf("%d\n", x);  // 5</code>
+
+    </article>
+    </section>
+  <section class="main-section" id="Global_variables">
+    <header>Global variables</header>
+    <article>
+<p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+
+<p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Constants">
+    <header>Constants</header>
+    <article>
+<p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+
+      <code>const PI = 3.14;</code>
+    </article>
+    </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>Following are the examples of some very common data types used in C:</p>
+<ul>
+<li>char: The most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers. </li>
+<li>int: As the name suggests, an int variable is used to store an integer. </li>
+<li>float: It is used to store decimal numbers (numbers with floating point value) with single precision. </li>
+<li> double: It is used to store decimal numbers (numbers with floating point value) with double precision.</li>
+<li> void: Represents the absence of type.</li>
+</ul>
+    </article>
+    </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+
+<code>if (condition) {
+  statement_1;
+} else {
+  statement_2;
+}</code>
+condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
+<p>
+You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+      </p>
+<code>if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else if (condition_n) {
+  statement_n;
+} else {
+  statement_last;
+} </code>
+In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
+
+<code>if (condition) {
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
+} else {
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
+}</code>
+It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
+<code>if (x = y) {
+  /* statements here */
+}</code>
+If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
+
+<code>if ((x = y)) {
+  /* statements here */
+}</code>
+    </article>
+    </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
+
+<code>while (condition)
+  statement</code>
+If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+<p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+
+      <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+
+Example:
+
+      <p>The following while loop iterates as long as n is less than three:</p>
+
+<code>int n = 0;
+int x = 0;
+while (n < 3) {
+  n++;
+  x += n;
+}</code>
+<p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+
+<li>After the first pass: n = 1 and x = 1</li>
+<li>After the second pass: n = 2 and x = 3</li>
+<li>After the third pass: n = 3 and x = 6</li>
+ <p>After completing the third pass, the condition n &lt 3 is no longer true, so the loop terminates.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Function_declarations">
+    <header>Function declarations</header>
+    <article> 
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+      <li>The name of the function.</li>
+      <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+      <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+      <p>For example, the following code defines a simple function named square:</P>
+
+<code>function square(number) {
+  return number * number;
+}</code>
+<p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+    </p>
+    <code>return number * number;</code>
+<p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C Wikipedia Page</a>
+    </article>
+    </section>
+</main>

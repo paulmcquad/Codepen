@@ -1,0 +1,180 @@
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="main">
+<h1 id="title">Fingal Visitor Survey 2018</h1>
+<div id="form-outer">
+  <p id="description">
+    Survey of Visitors to Fingal
+  </p>
+  <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">What nationality are you?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+		  <option disabled value>Select an option</option>
+		  <option value="irish">Irish</option>
+		  <option value="northernirish">Northern Irish</option>
+		  <option value="british">British</option>
+		  <option value="french">French</option>
+		  <option value="german">German</option>
+		  <option value="american">American</option>
+		  <option value="canadian">Canadian</option>
+		  <option value="spanish">Spanish</option>
+		  <option value="italian">Italian</option>
+		  <option value="russian">Russian</option>
+		  <option value="ukranian">Ukranian</option>
+		  <option value="lithuanian">Lithuanian</option>
+		  <option value="polish">Polish</option>
+		  <option value="latvian">Latvian</option>
+		  <option value="estonian">Estonian</option>
+		  <option value="australian">Australian</option>
+		  <option value="swedish">Swedish</option>
+		  <option value="norwegian">Norwegian</option>	  
+		  <option value="finnish">Finnish</option>
+		  <option value="dutch">Dutch</option>
+		  <option value="chinese">Chinese</option>	
+		  <option value="japanese">Japanese</option>
+		  <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+	
+	<div class="rowTab">
+      <div class="labels">
+        <label for="userRating">Age Group?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>0 - 18<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>18 - 35<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>35 - 60<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>  
+          <li class="radio"><label>60+<input name="radio-buttons" value="4"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>	
+	
+	<div class="rowTab">
+      <div class="labels">
+        <label for="userRating">What is your group size?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>1<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>2<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>4+<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>  
+          <li class="radio"><label>6+<input name="radio-buttons" value="4"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Large group<input name="radio-buttons" value="5"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+		
+	<div class="rowTab">
+      <div class="labels">
+        <label for="userRating">Staying in Fingal / locally? (outside Dublin City)?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Yes<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>No<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Don't know<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+		
+	<div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">How did you hear about Fingal?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+		  <option disabled value>Select an option</option>
+		  <option value="website">Website</option>
+		  <option value="socialmedia">Social Media</option>
+		  <option value="friendfamily">Friend Family</option>
+		  <option value="stranger">Stranger</option>
+		  <option value="magazine">Magazine</option>		  
+		  <option value="brochure">Brochure</option>
+		  <option value="advertising">Advertising</option>		  
+		  <option value="accommodation">Accommodation</option>
+		  <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+
+	<div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">How did you travel to Fingal?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+		  <option disabled value>Select an option</option>
+		  <option value="car">Car</option>
+		  <option value="train">Train</option>
+		  <option value="publicbus">Public Bus</option>
+		  <option value="bustour">Bus Tour</option>	  
+		  <option value="bicycle">Bicycle</option>
+		  <option value="walk">Walk</option>  
+		  <option value="motorbike">Motorbike</option>  
+		  <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+	
+	 <div class="rowTab">
+      <div class="labels">
+        <label for="userRating">How much did you spend today (optional)?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Less than &euro;50<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>&euro;50 - &euro;100<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>&euro;100+<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+	
+	 <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">Location of Survey?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+		  <option disabled value>Select an option</option>
+		  <option value="malahidepastoralcentre">Malahide Pastoral Centre</option>
+		  <option value="malahidecastle">Malahide Castle</option>
+ 		  <option value="howth">Howth</option>
+		  <option value="swordscastle">Swords Castle</option>
+		  <option value="balbriggan">Balbriggan</option>
+ 		  <option value="ardgillancastle">Ardgillan Castle</option>
+		  <option value="newbridgehouse">Newbridge House</option>
+		  <option value="skerriesmills">Skerries Mills</option>		  
+		  <option value="seamusenniscentre">Seamus Ennis Centre</option>		  
+	https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwj3vObZkaneAhUPmbQKHTJOAUUQFjAAegQIBhAB&url=https%3A%2F%2Fwww.html.am%2Fhtml-codes%2Fcharacter-codes%2Fhtml-copyright-code.cfm&usg=AOvVaw3BW--uUKjY-6p-vAOTavlF	  <option value="draiocht">Draiocht</option>		  
+		  <option value="pavillionsshoppingcentre">Pavillions Shopping Centre</option>		  
+		  <option value="blanchardstownshoppingcentre">Blanchardstown Shopping Centre</option>		  
+		  <option value="skerries">Skerries</option>		  
+		  <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+
+	<div class="rowTab">
+      <div class="labels">
+        <label for="comments">Any Comments or Suggestions?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+	
+    <button id="submit" type="submit">Submit</button>
+  </form>
+  
+  <footer>&copy; Copyright 2018 Paul McQuade</footer>
+
+</div>
+</div>  
+
